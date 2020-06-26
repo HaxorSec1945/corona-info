@@ -10,7 +10,7 @@ echo -e $okegreen "Corona Info 2020"
 echo -e $okegreen "by Mrcakil"
 echo ""
 
-ngecurl=$(curl -s --insecure https://api.kawalcorona.com |jq -r ".[36] .attributes" > corona.json)
+ngecurl=$(curl -s --insecure https://api.kawalcorona.com |jq -r ".[28] .attributes" > corona.json)
 neg=$(cat corona.json | jq ".Country_Region")
 confirm=$(cat corona.json | jq ".Confirmed")
 meninggal=$(cat corona.json | jq ".Deaths")
